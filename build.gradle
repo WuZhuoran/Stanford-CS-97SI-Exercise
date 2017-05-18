@@ -1,0 +1,43 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+eclipse {
+	wtp {
+	    component {
+
+	        sourceDirs = new HashSet([
+	            new File(project.getProjectDir().getAbsolutePath() + "/src")
+	        ])
+	    }
+	}
+}
+
+sourceSets{
+    test{
+        java{
+            srcDir 'src/test/java'
+        }
+        resources{
+            srcDir 'src/test/resources'
+        }
+    }
+    main{
+        java{
+            srcDir 'src/main/java'
+        }
+        resources{
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+dependencies {
+    testCompile "junit:junit:4.12"
+}
