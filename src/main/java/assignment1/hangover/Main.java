@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 /**
  * 
- * @author Oliver 
- * <a>http://poj.org/problem?id=1003</a>
+ * @author Oliver <a>http://poj.org/problem?id=1003</a>
  */
 public class Main {
 
