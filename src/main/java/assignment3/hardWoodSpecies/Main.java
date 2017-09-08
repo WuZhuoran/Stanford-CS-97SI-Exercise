@@ -1,4 +1,4 @@
-package assignment2.hardWoodSpecies;
+package assignment3.hardWoodSpecies;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,7 +34,8 @@ public class Main {
 		
 		Iterator<?> it = sorted.entrySet().iterator();
 	    while (it.hasNext()) {
-	        Map.Entry<String, Integer> pair = (Map.Entry<String, Integer>)it.next();
+	        @SuppressWarnings("unchecked")
+			Map.Entry<String, Integer> pair = (Map.Entry<String, Integer>)it.next();
 	        Integer num = pair.getValue();
 	        double popu = num.doubleValue() / count * 1.0;
 	        System.out.println(pair.getKey() + " " + df4.format(100 * popu));
