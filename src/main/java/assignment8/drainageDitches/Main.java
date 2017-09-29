@@ -30,7 +30,7 @@ public class Main {
 
 			//Main.printMatrix(matrix);
 
-			// Apply Ford-Fulkerson Pseudocode
+			// Apply EK
 			
 			int answer = Main.ek(matrix, 1, m);
 			System.out.println(answer);
